@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Login&nbsp;to&nbsp;Dashboard</title>
+    <meta name="viewport" content="width-devie-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <script type="text/javascript" language="javascript" src="{{ url_for('static', filename = 'js/jquery-3.2.1.min.js') }}"></script>
+    <script type="text/javascript" language="javascript" src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" language="javascript" src="{{ url_for('static', filename = 'js/script.js') }}"></script>
+    <script type="text/javascript" language="javascript" src="{{ url_for('static', filename = 'js/angular.min.js') }}"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">HOME</a>
+        </div>
+    </div>
+    <div class="container">
+        <form method="POST" action="http://localhost:5000/dashboard" class="LoginBlock col-sm-12 col-xs-12 col-md-offset-4 col-md-4" data-ng-app="" name="NgForm">
+            <div class="form-group">
+                <label for="admin_email">E_mail</label>
+                <input type="email" name="admin_email" data-ng-model="admin_email" class="form-control" placeholder="E_mail" required="true" autocomplete="off">
+                <span data-ng-show="NgForm.admin_email.$touched && NgForm.admin_email.$invalid" style="color:red"><strong>E_mail&nbsp;is&nbsp;required</strong></span>
+                <span data-ng-show="NgForm.admin_email.$error.email" style="color: red"><strong>Invalid&nbsp;E_mail</strong></span>
+                <span data-ng-show="NgForm.admin_email.$valid" style="color: green"><strong>OK</strong></span>
+            </div>
+            <div class="form-group">
+                <label for="admin_password">Password</label>
+                <input type="password" class="form-control" name="admin_password" placeholder="Password" required="true" autocomplete="off" data-ng-model="admin_password">
+                <span data-ng-show="NgForm.admin_password.$touched && NgForm.admin_password.$invalid" style="color:red"><strong>Password&nbsp;is&nbsp;required</strong></span>
+                <span data-ng-show="NgForm.admin_password.$valid" style="color: green"><strong>OK</strong></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Log&nbsp;in" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

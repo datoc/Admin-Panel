@@ -1,0 +1,29 @@
+html,
+body {
+  background-color: #F1F2F3;
+  margin: 0;
+  padding: 0;
+}
+.LoginBlock {
+  margin-top: 250px;
+  overflow: hidden;
+  margin: 0;
+}
+.left-block {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+}
+.nav-stacked li:hover {
+  background-color: #202020;
+}
+li a {
+  font-weight: bold;
+  color: #202020;
+}
+li a:hover {
+  color: #25b4b4;
+}
+.navbar {
+  border-radius: 0px;
+}

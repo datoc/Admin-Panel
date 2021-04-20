@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Login&nbsp;to&nbsp;Dashboard</title>
+    <meta name="viewport" content="width-devie-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <script type="text/javascript" language="javascript" src="{{ url_for('static', filename = 'js/jquery-3.2.1.min.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" language="javascript" src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" language="javascript" src="{{ url_for('static', filename = 'js/script.js') }}"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/dashboard">HOME</a>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/logout">Log&nbsp;out&nbsp;&nbsp;<i class="fa fa-sign-out"></i></a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="left-block col-lg-2 col-md-2 col-xs-12 col-sm-12" style="background:red;">
+                <div class="nav nav-tab nav-stacked">
+                    <li>
+                        <a href="/users" class="active">USERS</a>
+                    </li>
+                    <li>
+                        <a href="/posts">POSTS</a>
+                    </li>
+                    <li>
+                        <a href="/notifications">NOTIFICATION</a>
+                    </li>
+                    <li>
+                        <a href="/messages">MESSAGES</a>
+                    </li>
+                    <li>
+                        <a href="/follows">FOLLOWS</a>
+                    </li>
+                    <li>
+                        <a href="/pictures">GLOBAL&nbsp;PICTURES</a>
+                    </li>
+                    <li>
+                        <a href="/user_pics">USER&nbsp;PICTURES</a>
+                    </li>
+                    <li>
+                        <a href="/likes">LIKES</a>
+                    </li>
+                    <li>
+                        <a href="/comments">COMMENTS</a>
+                    </li>
+                </div>
+            </div>
+            <div class="col-lg-10" style="background-color: mediumvioletred;">
+                <table class="table table-response table-hover">
+                    <tr>
+                        <th>ID</th>
+                        <th>Profile_pic</th>
+                        <th>Cover</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Password</th>
+                        <th>Official</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

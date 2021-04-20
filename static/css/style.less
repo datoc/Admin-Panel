@@ -1,0 +1,39 @@
+@BackColor: #F1F2F3;
+@zero: 0;
+
+html, body {
+    background-color: @BackColor;
+    margin: @zero;
+    padding: @zero;
+}
+
+.LoginBlock {
+    margin-top: 250px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.left-block {
+    overflow: hidden;
+    position: fixed;
+    height: percentage(1.0);
+}
+
+.nav-stacked { 
+    li:hover {
+        background-color: #202020;
+    }
+}
+
+li a {
+    font-weight: bold;
+    color: #202020;
+
+    &:hover {
+        color: rgb(37, 180, 180);
+    }
+}
+
+.navbar {
+    border-radius: 0px;
+}
